@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OS
 {
-    public partial class Form1 : Form
+    public partial class initializing : Form
     {
-        public Form1()
+        public initializing()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace OS
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

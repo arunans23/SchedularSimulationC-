@@ -10,28 +10,43 @@ namespace OS
     class RoundRobin
     {
         public ArrayList processes=new ArrayList() ;
-        public int timeQuantum;
+        public Processor processor ;
+        public Dispatcher dispatcher;
 
-        
-        public void setQuantum(int quantum){
-            this.timeQuantum = quantum;
-        }
-        
-        public void addProcess(Process process)
+        public RoundRobin(int quantum)
         {
-            this.processes.Add(process);
+            this.processor = new Processor();
+            this.dispatcher = new Dispatcher(this,quantum);
         }
 
-        public void terminateProcess(Process process)
+        public Boolean addProcess(Process process)
+            //to add a process.
         {
-            foreach (Process prs in processes)
+            foreach (Process p in this.processes)
             {
-                if (prs == process)
-                {
-
-                }
+                if (process.name.ToLower() == p.name.ToLower()) return false;
             }
+            this.processes.Add(process);
+            return true;
         }
+
+        public Boolean terminateProcess(String name)
+            //to remove a process
+        {
+            ArrayList temp = this.processes;
+            foreach (Process p in temp)
+            {
+                if (p.name == name)
+                {
+                    processes.Remove(p);
+                    return true;
+                }
+            } return false;
+        }
+
+        
+       
+       
 
     }
 }

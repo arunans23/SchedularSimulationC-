@@ -1,6 +1,6 @@
 ﻿namespace OS
 {
-    partial class Form1
+    partial class initializing
     {
         /// <summary>
         /// Required designer variable.
@@ -121,6 +121,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Create";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -138,6 +139,8 @@
             this.processName,
             this.arivalTime,
             this.burstTime});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(11, 94);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(291, 187);
@@ -148,16 +151,21 @@
             // processName
             // 
             this.processName.Text = "Process Name";
+            this.processName.Width = 93;
             // 
             // arivalTime
             // 
+            this.arivalTime.Text = "Arival Time";
             this.arivalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.arivalTime.Width = 96;
             // 
             // burstTime
             // 
+            this.burstTime.Text = "Burst Time";
             this.burstTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.burstTime.Width = 97;
             // 
-            // Form1
+            // initializing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "initializing";
             this.Text = "Create Process";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
