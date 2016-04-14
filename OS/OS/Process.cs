@@ -8,16 +8,20 @@ namespace OS
 {
     class Process
     {
-        public String name;
-        public int arivalTime;
+        public String processID;
+        public int arrivalTime;
         public int burstTime;
-        public int exicutedTime;
+        public int executedTime;
 
-        public Process(String name , int arivalTime , int burstTime)
+        public Process(String id , int arrivalTime , int burstTime)
         {
-            this.name = name;
-            this.arivalTime = arivalTime;
+            this.processID = id;
+            this.arrivalTime = arrivalTime;
             this.burstTime = burstTime;
+        }
+
+        public String getprocessID() {
+            return processID;
         }
 
        }

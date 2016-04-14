@@ -10,15 +10,31 @@ namespace OS
     class Dispatcher
     {
         RoundRobin rr;
-        int timeQuantum;
-        public Dispatcher(RoundRobin rr , int quantum)
+
+        ArrayList processQueue;
+
+
+        public Dispatcher()
         {
-            this.rr = rr;
-            this.timeQuantum = quantum;
+            this.rr = new RoundRobin(this);
+            Console.WriteLine("Dispatcher clear");
+          
         }
 
         //the logics for the round robin algorithm will be bellow
 
+        public void setProcessQueue(ArrayList processes) {
+            this.processQueue = processes;
+        }
 
+        public ArrayList getProcessQueue() {
+            return processQueue;
+        }
+
+        //currently only Roundrobin is set as default
+        public void dispatchProcess() {
+            rr.setProcessQueue(processQueue);
+            rr.execute();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,20 @@ namespace OS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new initializing());
+
+            /*
+            Dispatcher testDis = new Dispatcher();
+
+            Application.Exit();
+            Process test = new Process("test", 1, 5);
+
+            ArrayList testArr = new ArrayList();
+            testArr.Add(test);
+
+            testDis.setProcessQueue(testArr);
+            testDis.dispatchProcess();
+            */
+
         }
     }
 }

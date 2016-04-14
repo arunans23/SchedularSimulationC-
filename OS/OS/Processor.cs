@@ -9,10 +9,12 @@ namespace OS
     class Processor
     {
         public Process currentProcess;
+        private int allowedTime;
 
-        public void setProcess(Process process)
+        public void setProcess(Process process, int time)
         {
             this.currentProcess = process;
+            this.allowedTime = time;
         }
 
         public Process returnProcess()
@@ -22,12 +24,16 @@ namespace OS
             return temp;
         }
 
-        public Boolean exicute()
+        public Boolean execute()
         {
             if (this.currentProcess != null)
             {
-                this.currentProcess.exicutedTime++;
-                return true;
+                //this.currentProcess.exicutedTime++;
+                //return true;
+                for (int i = 1; i <= allowedTime; i++) {
+                    Console.WriteLine(currentProcess.getprocessID() + " running...");
+                }
+                
             } 
             return false;
             
