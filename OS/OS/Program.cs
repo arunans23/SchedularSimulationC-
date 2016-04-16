@@ -17,6 +17,9 @@ namespace OS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //CPUScheduler cpuScheduler = new CPUScheduler();
+            
             Application.Run(new initializing());
 
             /*
@@ -33,5 +36,7 @@ namespace OS
             */
 
         }
+
+
     }
 }

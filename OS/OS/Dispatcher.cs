@@ -17,7 +17,6 @@ namespace OS
         public Dispatcher()
         {
             this.rr = new RoundRobin(this);
-            Console.WriteLine("Dispatcher clear");
           
         }
 
