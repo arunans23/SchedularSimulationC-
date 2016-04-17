@@ -11,13 +11,17 @@ using System.Windows.Forms;
 
 namespace OS
 {
-    public partial class test : Form
+    public partial class MainWindow : Form
     {
-        public test()
+        CPUScheduler cpuScheduler;
+
+        public MainWindow()
         {
+            cpuScheduler = new CPUScheduler();
             InitializeComponent();
         }
 
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             ArrayList arry = new ArrayList();
@@ -32,6 +36,19 @@ namespace OS
                 MessageBox.Show("done");
             }
             MessageBox.Show("not Done");
+        }
+        */
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var processWindow = new initializing();
+            processWindow.Show();
+            processWindow.setCPUScheduler(cpuScheduler);
+        }
+
+        private void main_start_Click(object sender, EventArgs e)
+        {
+            cpuScheduler.getDispatcher().dispatchProcess();
         }
     }
 }

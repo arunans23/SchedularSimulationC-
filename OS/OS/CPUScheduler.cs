@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OS
 {
-    class CPUScheduler
+    public class CPUScheduler
     {
         private Dispatcher dispatcher;
         private ProcessEngine processEngine;

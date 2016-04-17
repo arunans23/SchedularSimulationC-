@@ -18,7 +18,6 @@ namespace OS
 
         public initializing()
         {
-            cpuScheduler = new CPUScheduler();
             InitializeComponent();
         }
 
@@ -34,7 +33,9 @@ namespace OS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            ProcessEngine tempPE = cpuScheduler.getProcessEngine();
+            tempPE.userSpecificGenerate();
+            //still needs to edit
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace OS
 
         private void generateRandom_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             ProcessEngine tempPE = cpuScheduler.getProcessEngine();
             processQueue = tempPE.randomProcessGenerate();
 
@@ -59,6 +61,28 @@ namespace OS
             }
            
 
+        }
+
+        private void process_done_Click(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count == 0) {
+                MessageBox.Show("Process Empty","Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                cpuScheduler.getDispatcher().setProcessQueue(processQueue);
+                this.Hide();
+            }
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            this.Hide();
+        }
+
+        public void setCPUScheduler(CPUScheduler cpuScheduler) {
+            this.cpuScheduler = cpuScheduler;
         }
     }
 }

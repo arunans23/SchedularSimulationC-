@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace OS
 {
-    class Process
+    public class Process
     {
         public String processID;
         public int arrivalTime;
         public int burstTime;
         public int executedTime;
+        public int waitingTime;
 
         public Process(String id , int arrivalTime , int burstTime)
         {
             this.processID = id;
             this.arrivalTime = arrivalTime;
             this.burstTime = burstTime;
+            executedTime = 0;
+            waitingTime = 0;
         }
 
         public String getprocessID() {

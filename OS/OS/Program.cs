@@ -20,7 +20,7 @@ namespace OS
 
             //CPUScheduler cpuScheduler = new CPUScheduler();
             
-            Application.Run(new initializing());
+            Application.Run(new MainWindow());
 
             /*
             Dispatcher testDis = new Dispatcher();

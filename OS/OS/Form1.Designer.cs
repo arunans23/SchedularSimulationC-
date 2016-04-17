@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.process_done = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,14 +47,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // process_done
             // 
-            this.button1.Location = new System.Drawing.Point(228, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = true;
+            this.process_done.Location = new System.Drawing.Point(228, 291);
+            this.process_done.Name = "process_done";
+            this.process_done.Size = new System.Drawing.Size(75, 23);
+            this.process_done.TabIndex = 1;
+            this.process_done.Text = "Done";
+            this.process_done.UseVisualStyleBackColor = true;
+            this.process_done.Click += new System.EventHandler(this.process_done_Click);
             // 
             // cancel
             // 
@@ -64,6 +65,7 @@
             this.cancel.TabIndex = 2;
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // label1
             // 
@@ -79,9 +81,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Araival Time";
+            this.label2.Text = "Arrival Time";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -155,7 +157,7 @@
             this.processName.Text = "Process Name";
             this.processName.Width = 93;
             // 
-            // arivalTime
+            // arrivalTime
             // 
             this.arrivalTime.Text = "Arrival Time";
             this.arrivalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -193,7 +195,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.process_done);
             this.Name = "initializing";
             this.Text = "Create Process";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -205,7 +207,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button process_done;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

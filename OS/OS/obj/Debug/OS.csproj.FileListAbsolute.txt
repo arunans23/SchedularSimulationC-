@@ -16,5 +16,5 @@ D:\SchedularSimulationCsharp\OS\OS\bin\Debug\OS.pdb
 D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.csprojResolveAssemblyReference.cache
 D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.initializing.resources
 D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.Properties.Resources.resources
-D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.test.resources
 D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.csproj.GenerateResource.Cache
+D:\SchedularSimulationCsharp\OS\OS\obj\Debug\OS.MainWindow.resources

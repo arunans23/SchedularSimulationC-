@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace OS
 {
@@ -28,12 +29,24 @@ namespace OS
         {
             if (this.currentProcess != null)
             {
-                //this.currentProcess.exicutedTime++;
+                //this.currentProcess.executedTime++;
                 //return true;
+
+                /*
                 for (int i = 1; i <= allowedTime; i++) {
-                    Console.WriteLine(currentProcess.getprocessID() + " running...");
+                    if (currentProcess.burstTime != currentProcess.executedTime){
+                        Console.WriteLine(currentProcess.getprocessID() + " running...");
+                        currentProcess.executedTime++;
+                        currentProcess.waitingTime--;   //to balance off the increased waitingTime
+                    }
+                    else return false;
                 }
-                
+                */
+
+                Thread.Sleep(200);
+                currentProcess.executedTime += 200;
+                Console.WriteLine(currentProcess.getprocessID() + " running...");
+
             } 
             return false;
             

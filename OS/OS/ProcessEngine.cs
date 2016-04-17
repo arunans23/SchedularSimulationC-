@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OS
 {
-    class ProcessEngine
+    public class ProcessEngine
     {
         private ArrayList processQueue;
 
@@ -15,10 +15,13 @@ namespace OS
         //this method will generate random processes
         public ArrayList randomProcessGenerate() {
             processQueue = new ArrayList();
+            Process temp = new Process("10001", 0, 3500); // first process is default
+            processQueue.Add(temp);
+
             Random rnd = new Random();
 
-            for (int i = 1; i <= 10; i++) {
-                Process tempProcess = new Process((10000+i).ToString(), rnd.Next(1,11), rnd.Next(1,21));
+            for (int i = 2; i <= 10; i++) {
+                Process tempProcess = new Process((10000+i).ToString(), rnd.Next(0,10001), rnd.Next(1,8001));
                 processQueue.Add(tempProcess);
             }
             return processQueue;
