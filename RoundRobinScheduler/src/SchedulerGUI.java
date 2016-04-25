@@ -44,8 +44,8 @@ public class SchedulerGUI extends JFrame implements ActionListener {
         blockedItems = new JPanel();
         blockedItems.setBorder(BorderFactory.createTitledBorder("Blocked Processs"));
         blockedItems.setLayout(new FlowLayout(FlowLayout.LEFT));
-        //blockedItems.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-        //blockedItems.setMinimumSize(new Dimension(WIDTH, HEIGHT));
+        blockedItems.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        blockedItems.setMinimumSize(new Dimension(WIDTH, HEIGHT));
 
 //        finishedItems = new JPanel();
 //        finishedItems.setBorder(BorderFactory.createTitledBorder("Finished Processs"));
